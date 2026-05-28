@@ -13,7 +13,7 @@
 </div>
 
 <!-- About me — YAML style (looks unique and techy) -->
-name       : D.M. Ravidu Ravisara
+D.M. Ravidu Ravisara
 education  : BSc (Hons) Computer Science — SLIIT, Sri Lanka
 focus      : Production-grade systems · CI/CD · Cloud · Compiler Engineering
 stack      : Java · Kotlin · C# · Python · TypeScript · Dart · C
