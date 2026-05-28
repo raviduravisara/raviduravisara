@@ -1,7 +1,3 @@
-# GitHub Profile README for raviduravisara
-# Copy the content between the --- markers into your README.md file
-# ---
-
 <!-- Header — animated typing SVG -->
 <div align="center">
 
