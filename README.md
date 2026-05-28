@@ -161,9 +161,8 @@ and I'm always learning something new, currently diving deep into <strong>Transf
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=raviduravisara&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=0D7C6B&icon_color=0D7C6B&text_color=ffffff&cache_seconds=1800" />
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raviduravisara&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0D7C6B&text_color=ffffff&langs_count=8&cache_seconds=1800&hide=html,css" />
+<img height="180em" src="./assets/stats.svg" />
+<img height="180em" src="./assets/top-langs.svg" />
 
 </div>
 
