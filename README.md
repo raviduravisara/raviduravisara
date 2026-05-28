@@ -12,15 +12,22 @@
 <img src="https://komarev.com/ghpvc/?username=raviduravisara&style=for-the-badge&color=0D7C6B&label=PROFILE+VIEWS" alt="Profile Views" />
 </div>
 
-<!-- About me — YAML style (looks unique and techy) -->
-D.M. Ravidu Ravisara
-education  : BSc (Hons) Computer Science — SLIIT, Sri Lanka
-focus      : Production-grade systems · CI/CD · Cloud · Compiler Engineering
-stack      : Java · Kotlin · C# · Python · TypeScript · Dart · C
-currently  : Building HEALIX (Hospital Mgmt) & AutoPilot (DevOps Platform)
-learning   : Transformer architecture & Attention mechanisms in Deep Learning
-portfolio  : https://ravidu.online
-contact    : raviduravisarad@gmail.com
+<!-- About me — clean prose -->
+<div align="center">
+<p>
+I'm a <strong>Computer Science undergraduate at SLIIT, Sri Lanka</strong> with a passion for building things that actually work in production —
+not just on localhost. I spend most of my time designing <strong>secure backend APIs</strong>, shipping <strong>full-stack web and mobile apps</strong>,
+and automating everything with <strong>Docker, GitHub Actions, and Azure</strong>.
+</p>
+<p>
+Beyond typical undergraduate work, I've built a <strong>custom compiler and DSL</strong>, implemented <strong>Raft consensus</strong> from scratch,
+and integrated <strong>on-device AI</strong> into mobile apps. I write clean, tested, deployable code —
+and I'm always learning something new, currently diving deep into <strong>Transformer architecture and deep learning</strong>.
+</p>
+<p>
+📍 Kandy / Colombo, Sri Lanka &nbsp;·&nbsp; 🌐 <a href="https://ravidu.online">ravidu.online</a> &nbsp;·&nbsp; ✉️ raviduravisarad@gmail.com
+</p>
+</div>
 
 🛠️ Tech Stack
 <!-- Languages -->
