@@ -174,11 +174,11 @@ and I'm always learning something new, currently diving deep into <strong>Transf
 
 ---
 
-## 🏆 GitHub Trophies
+## 📈 Contribution Activity
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=raviduravisara&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=10" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=raviduravisara&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=0D7C6B&line=0D7C6B&point=ffffff" />
 
 </div>
 
