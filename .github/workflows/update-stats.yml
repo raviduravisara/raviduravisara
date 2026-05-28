@@ -2,16 +2,16 @@ name: Update GitHub Stats Cards
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # runs daily at 3:00 AM UTC
-  workflow_dispatch:        # allows manual trigger from Actions tab
+    - cron: "0 3 * * *"
+  workflow_dispatch:
   push:
-    branches: [main]        # also runs on every push to main
+    branches: [main]
 
 jobs:
   generate-stats:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # needed to commit SVGs back to repo
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,43 +20,22 @@ jobs:
       - name: Create output directory
         run: mkdir -p assets
 
-      # ── Stats Card ────────────────────────────────────────────
       - name: Generate GitHub Stats Card
         uses: stats-organization/github-readme-stats-action@main
         with:
           card: stats
-          options: >
-            username=raviduravisara
-            &show_icons=true
-            &count_private=true
-            &include_all_commits=true
-            &hide_border=true
-            &bg_color=0D1117
-            &title_color=0D7C6B
-            &icon_color=0D7C6B
-            &text_color=ffffff
-            &rank_icon=github
+          options: "show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=0D7C6B&icon_color=0D7C6B&text_color=ffffff&rank_icon=github"
           path: assets/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Top Languages Card ────────────────────────────────────
       - name: Generate Top Languages Card
         uses: stats-organization/github-readme-stats-action@main
         with:
           card: top-langs
-          options: >
-            username=raviduravisara
-            &layout=compact
-            &hide_border=true
-            &bg_color=0D1117
-            &title_color=0D7C6B
-            &text_color=ffffff
-            &langs_count=8
-            &hide=html,css,scss
+          options: "layout=compact&hide_border=true&bg_color=0D1117&title_color=0D7C6B&text_color=ffffff&langs_count=8&hide=html,css,scss"
           path: assets/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Commit SVGs back to repo ─────────────────────────────
       - name: Commit and push updated SVGs
         run: |
           git config --global user.name "github-actions[bot]"
