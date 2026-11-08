@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-labelledby="t d">
+  <title id="t">How I ship: pull request to live preview</title>
+  <desc id="d">Animated pipeline: git push opens a pull request, CI builds, tests and scans it, the image is pushed to a registry, Helm deploys it into its own Kubernetes namespace with PostgreSQL, and the live HTTPS URL is posted on the pull request. Merging the PR tears the environment down.</desc>
+  <style>
+    text { font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .eyebrow { font-size: 11px; letter-spacing: 2px; fill: #8B949E; }
+    .note { font-size: 12px; text-anchor: end; }
+    .num { font-size: 10px; letter-spacing: 1px; fill: #2EA08D; }
+    .title { font-size: 15px; font-weight: 700; fill: #E6EDF3; }
+    .sub { font-size: 11px; fill: #8B949E; }
+    .box { fill: #161B22; stroke: #2EA08D; stroke-width: 1.5; }
+    .arrow { stroke: #30363D; stroke-width: 1.5; fill: none; }
+
+    /* 8s loop: head travels 4% → 74% lighting each box, stays live until 82%, then the PR merges and everything tears down. */
+    .fill { transform-box: fill-box; transform-origin: left center; animation: fill 8s linear infinite; }
+    .head { animation: head 8s linear infinite; }
+    #b0 { animation: b0 8s linear infinite; }
+    #b1 { animation: b1 8s linear infinite; }
+    #b2 { animation: b2 8s linear infinite; }
+    #b3 { animation: b3 8s linear infinite; }
+    #b4 { animation: b4 8s linear infinite; }
+    .live { animation: live 8s linear infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 1.2s ease-out infinite; }
+    .msg-ship { animation: ship 8s linear infinite; }
+    .msg-down { animation: down 8s linear infinite; }
+
+    @keyframes fill { 0%, 4% { transform: scaleX(0); opacity: 1; } 74%, 82% { transform: scaleX(1); opacity: 1; } 86%, 100% { transform: scaleX(1); opacity: 0; } }
+    @keyframes head { 0%, 4% { transform: translateX(0); opacity: 1; } 74%, 82% { transform: translateX(700px); opacity: 1; } 86%, 100% { transform: translateX(700px); opacity: 0; } }
+    @keyframes b0 { 0%, 3% { stroke: #30363D; } 4%, 82% { stroke: #2EA08D; } 85%, 100% { stroke: #30363D; } }
+    @keyframes b1 { 0%, 21% { stroke: #30363D; } 21.5%, 82% { stroke: #2EA08D; } 85%, 100% { stroke: #30363D; } }
+    @keyframes b2 { 0%, 38.5% { stroke: #30363D; } 39%, 82% { stroke: #2EA08D; } 85%, 100% { stroke: #30363D; } }
+    @keyframes b3 { 0%, 56% { stroke: #30363D; } 56.5%, 82% { stroke: #2EA08D; } 85%, 100% { stroke: #30363D; } }
+    @keyframes b4 { 0%, 73.5% { stroke: #30363D; } 74%, 82% { stroke: #3FB950; } 85%, 100% { stroke: #30363D; } }
+    @keyframes live { 0%, 73.5% { opacity: 0; } 74%, 82% { opacity: 1; } 84%, 100% { opacity: 0; } }
+    @keyframes pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(2.6); opacity: 0; } }
+    @keyframes ship { 0%, 82% { opacity: 1; } 84%, 96% { opacity: 0; } 98%, 100% { opacity: 1; } }
+    @keyframes down { 0%, 82% { opacity: 0; } 84%, 94% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+    /* Without motion, show the finished state. */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .msg-down { opacity: 0; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="899" height="229" rx="12" fill="#0D1117" stroke="#30363D"/>
+
+  <text class="eyebrow" x="28" y="40">HOW I SHIP · PR PREVIEW</text>
+  <text class="note msg-ship" x="872" y="40" fill="#2EA08D">git push → live URL in ~2 min</text>
+  <text class="note msg-down" x="872" y="40" fill="#8B949E" opacity="0">PR merged → environment torn down</text>
+
+  <!-- arrows between steps -->
+  <path class="arrow" d="M177 122h18m-5 -5l5 5l-5 5"/>
+  <path class="arrow" d="M352 122h18m-5 -5l5 5l-5 5"/>
+  <path class="arrow" d="M527 122h18m-5 -5l5 5l-5 5"/>
+  <path class="arrow" d="M702 122h18m-5 -5l5 5l-5 5"/>
+
+  <!-- steps -->
+  <g>
+    <rect id="b0" class="box" x="25" y="80" width="150" height="84" rx="10"/>
+    <text class="num" x="41" y="104">01</text>
+    <text class="title" x="41" y="128">git push</text>
+    <text class="sub" x="41" y="148">opens PR #42</text>
+  </g>
+  <g>
+    <rect id="b1" class="box" x="200" y="80" width="150" height="84" rx="10"/>
+    <text class="num" x="216" y="104">02</text>
+    <text class="title" x="216" y="128">CI</text>
+    <text class="sub" x="216" y="148">build · test · scan</text>
+  </g>
+  <g>
+    <rect id="b2" class="box" x="375" y="80" width="150" height="84" rx="10"/>
+    <text class="num" x="391" y="104">03</text>
+    <text class="title" x="391" y="128">image</text>
+    <text class="sub" x="391" y="148">push to registry</text>
+  </g>
+  <g>
+    <rect id="b3" class="box" x="550" y="80" width="150" height="84" rx="10"/>
+    <text class="num" x="566" y="104">04</text>
+    <text class="title" x="566" y="128">helm deploy</text>
+    <text class="sub" x="566" y="148">own ns + postgres</text>
+  </g>
+  <g>
+    <rect id="b4" class="box" x="725" y="80" width="150" height="84" rx="10" style="stroke:#3FB950"/>
+    <text class="num" x="741" y="104">05</text>
+    <text class="title" x="741" y="128">live</text>
+    <text class="sub" x="741" y="148">URL posted on PR</text>
+    <g class="live">
+      <circle class="pulse" cx="857" cy="99" r="4" fill="#3FB950"/>
+      <circle cx="857" cy="99" r="4" fill="#3FB950"/>
+    </g>
+  </g>
+
+  <!-- progress track -->
+  <rect x="100" y="193" width="700" height="3" rx="1.5" fill="#21262D"/>
+  <rect class="fill" x="100" y="193" width="700" height="3" rx="1.5" fill="#0D7C6B"/>
+  <g class="head">
+    <circle cx="100" cy="194.5" r="9" fill="#2EA08D" opacity=".18"/>
+    <circle cx="100" cy="194.5" r="4.5" fill="#5EEAD4"/>
+  </g>
+</svg>

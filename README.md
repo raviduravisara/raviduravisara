@@ -44,6 +44,12 @@ Right now I'm going deep on <strong>Transformer architecture and deep learning</
 </p>
 </div>
 
+<div align="center">
+  <a href="https://github.com/raviduravisara/pr-preview">
+    <img src="./assets/pipeline.svg" width="100%" alt="How I ship: git push, CI, image, Helm deploy to its own Kubernetes namespace, live URL posted on the PR" />
+  </a>
+</div>
+
 ---
 
 ## 🛠️ Tech Stack
@@ -254,6 +260,16 @@ Right now I'm going deep on <strong>Transformer architecture and deep learning</
 <div align="center">
 
 <img src="https://streak-stats.demolab.com?user=raviduravisara&theme=tokyonight&hide_border=true&background=0D1117&ring=0D7C6B&fire=0D7C6B&currStreakLabel=0D7C6B" />
+
+</div>
+
+---
+
+## 🧊 Contribution City
+
+<div align="center">
+
+<img src="./profile-3d-contrib/profile-3d-teal.svg" width="100%" alt="3D contribution calendar" />
 
 </div>
 
